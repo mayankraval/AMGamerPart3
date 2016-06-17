@@ -1,0 +1,190 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="gameModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012.Azure" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Games">
+          <Key>
+            <PropertyRef Name="GameID" />
+          </Key>
+          <Property Name="GameID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="GameName" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Description" Type="varchar(max)" Nullable="false" />
+          <Property Name="TotalScore" Type="int" Nullable="false" />
+          <Property Name="Spectators" Type="bigint" Nullable="false" />
+          <Property Name="WinningTeam" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="LastUpdated" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="GameScores">
+          <Key>
+            <PropertyRef Name="ScoreID" />
+          </Key>
+          <Property Name="ScoreID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="GameID" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="TeamID" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="TotalScore" Type="int" Nullable="false" />
+          <Property Name="MaxScore" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Team">
+          <Key>
+            <PropertyRef Name="TeamID" />
+          </Key>
+          <Property Name="TeamID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Description" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="GameID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Users">
+          <Key>
+            <PropertyRef Name="UserID" />
+          </Key>
+          <Property Name="UserID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FirstName" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="LastName" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="UserName" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="EmailID" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Password" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Salt" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="TeamID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="gameModelStoreContainer">
+          <EntitySet Name="Games" EntityType="Self.Games" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="GameScores" EntityType="Self.GameScores" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Team" EntityType="Self.Team" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="gameModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Game">
+          <Key>
+            <PropertyRef Name="GameID" />
+          </Key>
+          <Property Name="GameID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="GameName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="TotalScore" Type="Int32" Nullable="false" />
+          <Property Name="Spectators" Type="Int64" Nullable="false" />
+          <Property Name="WinningTeam" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="LastUpdated" Type="DateTime" Nullable="false" Precision="3" />
+        </EntityType>
+        <EntityType Name="GameScore">
+          <Key>
+            <PropertyRef Name="ScoreID" />
+          </Key>
+          <Property Name="ScoreID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="GameID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="TeamID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="TotalScore" Type="Int32" Nullable="false" />
+          <Property Name="MaxScore" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Team">
+          <Key>
+            <PropertyRef Name="TeamID" />
+          </Key>
+          <Property Name="TeamID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Description" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="GameID" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="UserID" />
+          </Key>
+          <Property Name="UserID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="EmailID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Salt" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="TeamID" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="GameDefaultConnection" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Games" EntityType="Self.Game" />
+          <EntitySet Name="GameScores" EntityType="Self.GameScore" />
+          <EntitySet Name="Teams" EntityType="Self.Team" />
+          <EntitySet Name="Users" EntityType="Self.User" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="gameModelStoreContainer" CdmEntityContainer="GameDefaultConnection">
+          <EntitySetMapping Name="Games">
+            <EntityTypeMapping TypeName="gameModel.Game">
+              <MappingFragment StoreEntitySet="Games">
+                <ScalarProperty Name="GameID" ColumnName="GameID" />
+                <ScalarProperty Name="GameName" ColumnName="GameName" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="TotalScore" ColumnName="TotalScore" />
+                <ScalarProperty Name="Spectators" ColumnName="Spectators" />
+                <ScalarProperty Name="WinningTeam" ColumnName="WinningTeam" />
+                <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="GameScores">
+            <EntityTypeMapping TypeName="gameModel.GameScore">
+              <MappingFragment StoreEntitySet="GameScores">
+                <ScalarProperty Name="ScoreID" ColumnName="ScoreID" />
+                <ScalarProperty Name="GameID" ColumnName="GameID" />
+                <ScalarProperty Name="TeamID" ColumnName="TeamID" />
+                <ScalarProperty Name="TotalScore" ColumnName="TotalScore" />
+                <ScalarProperty Name="MaxScore" ColumnName="MaxScore" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Teams">
+            <EntityTypeMapping TypeName="gameModel.Team">
+              <MappingFragment StoreEntitySet="Team">
+                <ScalarProperty Name="TeamID" ColumnName="TeamID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="GameID" ColumnName="GameID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Users">
+            <EntityTypeMapping TypeName="gameModel.User">
+              <MappingFragment StoreEntitySet="Users">
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="EmailID" ColumnName="EmailID" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="Salt" ColumnName="Salt" />
+                <ScalarProperty Name="TeamID" ColumnName="TeamID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

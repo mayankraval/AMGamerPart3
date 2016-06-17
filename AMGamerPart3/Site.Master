@@ -1,0 +1,58 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="AMGamerPart3.Site" %>
+
+<%--
+ * @authors: Mayank Raval and  Akhil Thakkar
+ * @date: June 8, 2016
+ * @version : 0.0.1 
+   @Description : This page provides master page structure to other pages in web site
+--%>
+<%@ Register Src="~/User_Controls/Navbar.ascx" TagName="Navbar" TagPrefix="bs3" %>
+<!DOCTYPE html>
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <!--All the CSS Links are under here -->
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="Content/bootstrap-theme.min.css" rel="stylesheet" />
+    <link href="Content/font-awesome.min.css" rel="stylesheet" />
+    <link href="Content/app.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+    <meta name="description" content="The description of my page" />
+</head>
+<body>
+    <form id="form1" runat="server">
+        <bs3:Navbar runat="server" ID="PrimaryNav"></bs3:Navbar>
+        <div>
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+
+    <!-- Footer -->
+    <div class="navbar-fixed-bottom">
+        <div class="nav nav-justified" style="background-color: #000000">
+            <div class="navbar-text pull-left">
+                <p style="color: #ffffff">Copyright by Akhil Thakkar | Mayank Raval @ 2016</p>
+            </div>
+
+            <div class="navbar-text pull-right">
+                <a href="https://github.com/mayankraval" target="_blank"><i class="fa fa-github-square fa-2x"></i></a>
+                <a href="https://in.linkedin.com/in/mayankraval" target="_blank"><i class="fa fa-linkedin-square fa-2x"></i></a>
+                <a href="https://instagram.com/mayank.raval/" target="_blank"><i class="fa fa-instagram fa-2x"></i></a>
+                <a href="https://twitter.com/Mayank_Raval" target="_blank"><i class="fa fa-twitter-square fa-2x"></i></a>
+                <a href="https://www.facebook.com/mayank.raval" target="_blank"><i class="fa fa-facebook-square fa-2x"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- All JavaScript links are listed below -->
+    <script src="Scripts/jquery-2.2.3.min.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+    <script src="Scripts/app.js"></script>
+</body>
+</html>
