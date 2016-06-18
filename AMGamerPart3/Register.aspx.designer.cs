@@ -7,31 +7,29 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace AMGamerPart3
-{
-
-
-    public partial class Register
-    {
-
+namespace AMGamerPart3 {
+    
+    
+    public partial class Register {
+        
         /// <summary>
-        /// FirstNameTextbox control.
+        /// AlertFlash control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox FirstNameTextbox;
-
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl AlertFlash;
+        
         /// <summary>
-        /// LastNameTextBox control.
+        /// StatusLabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox LastNameTextBox;
-
+        protected global::System.Web.UI.WebControls.Label StatusLabel;
+        
         /// <summary>
         /// UserNameTextBox control.
         /// </summary>
@@ -40,7 +38,16 @@ namespace AMGamerPart3
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox UserNameTextBox;
-
+        
+        /// <summary>
+        /// PhoneNumberTextBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox PhoneNumberTextBox;
+        
         /// <summary>
         /// EmailTextBox control.
         /// </summary>
@@ -49,7 +56,7 @@ namespace AMGamerPart3
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox EmailTextBox;
-
+        
         /// <summary>
         /// PasswordTextBox control.
         /// </summary>
@@ -58,25 +65,16 @@ namespace AMGamerPart3
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox PasswordTextBox;
-
+        
         /// <summary>
-        /// ReEnterPasswordTextBox control.
+        /// ConfirmPasswordTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox ReEnterPasswordTextBox;
-
-        /// <summary>
-        /// RegisterButton control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button RegisterButton;
-
+        protected global::System.Web.UI.WebControls.TextBox ConfirmPasswordTextBox;
+        
         /// <summary>
         /// CancelButton control.
         /// </summary>
@@ -85,5 +83,14 @@ namespace AMGamerPart3
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button CancelButton;
+        
+        /// <summary>
+        /// RegisterButton control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button RegisterButton;
     }
 }

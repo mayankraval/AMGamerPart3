@@ -5,9 +5,10 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-
+// using statements that are required to connect to EF DB
 using AMGamerPart3.Models;
 using System.Web.ModelBinding;
+using System.Linq.Dynamic;
 
 namespace AMGamerPart3
 {

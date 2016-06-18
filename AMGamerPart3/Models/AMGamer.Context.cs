@@ -12,19 +12,19 @@ namespace AMGamerPart3.Models
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
-
+    
     public partial class GameDefaultConnection : DbContext
     {
         public GameDefaultConnection()
             : base("name=GameDefaultConnection")
         {
         }
-
+    
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             throw new UnintentionalCodeFirstException();
         }
-
+    
         public virtual DbSet<Game> Games { get; set; }
         public virtual DbSet<GameScore> GameScores { get; set; }
         public virtual DbSet<Team> Teams { get; set; }

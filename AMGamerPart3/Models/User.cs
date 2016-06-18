@@ -11,7 +11,7 @@ namespace AMGamerPart3.Models
 {
     using System;
     using System.Collections.Generic;
-
+    
     public partial class User
     {
         public int UserID { get; set; }

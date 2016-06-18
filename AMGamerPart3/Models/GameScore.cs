@@ -11,7 +11,7 @@ namespace AMGamerPart3.Models
 {
     using System;
     using System.Collections.Generic;
-
+    
     public partial class GameScore
     {
         public int ScoreID { get; set; }
