@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="GameDetails.aspx.cs" Inherits="AMGamerPart3.GameDetails" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="AddGame.aspx.cs" Inherits="AMGamerPart3.AddGame" %>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <!-- 
     Author: Akhil Thakkar and Mayank Raval 

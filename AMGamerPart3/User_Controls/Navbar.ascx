@@ -24,10 +24,20 @@
          <a class="navbar-brand" href="Default.aspx"><h3>AM Gamer</h3></a></ul>
             <ul class="nav navbar-nav navbar-right">
                 <li id="home" runat="server"><a href="Default.aspx"><i class="fa fa-home fa-lg"></i> Home</a></li>
-                <li id="login" runat="server"><a href="Login.aspx"><i class="fa fa-sign-in fa-lg"></i> Login</a></li>
-                <li id="register" runat="server"><a href="Register.aspx"><i class="fa fa-user-plus fa-lg"></i> Register</a></li>
-                <li id="game" runat="server"><a href="GameDetails.aspx"><i class="fa fa-gamepad fa-lg"></i> Game</a></li>
-                <li id="editgame" runat="server"><a href="EditGame.aspx"><i class="fa fa-gamepad fa-lg"></i> Edit Game</a></li>
+                <asp:PlaceHolder ID="PublicPlaceHolder" runat="server">
+                    <li id="login" runat="server"><a href="/Login.aspx"><i class="fa fa-sign-in fa-lg"></i> Login</a></li>
+                    <li id="register" runat="server"><a href="/Register.aspx"><i class="fa fa-user-plus fa-lg"></i> Register</a></li>
+                </asp:PlaceHolder>
+
+                <asp:PlaceHolder ID="UserPlaceHolder" runat="server">
+                    <li id="users" runat="server"><a href="/Admin/Users.aspx"><i class="fa fa-users fa-lg"></i> Users</a></li>
+                </asp:PlaceHolder>
+                <asp:PlaceHolder ID="GamerPlaceHolder" runat="server">
+                    <li id="menu" runat="server"><a href="/Gamer/MainMenu.aspx"><i class="fa fa-map-signs fa-lg"></i> Main Menu</a></li>
+                    <li id="addgame" runat="server"><a href="/Gamer/AddGame.aspx"><i class="fa fa-gamepad fa-lg"></i> Add Game</a></li>
+                    <li id="editgame" runat="server"><a href="/Gamer/EditGame.aspx"><i class="fa fa-gamepad fa-lg"></i> Edit Game</a></li>
+                    <li id="logout" runat="server"><a href="/Logout.aspx"><i class="fa fa-sign-out fa-lg"></i> Logout</a></li>
+                </asp:PlaceHolder>
                 <li id="contact" runat="server"><a href="Contact.aspx"><i class="fa fa-phone fa-lg"></i> Contact</a></li>
             </ul>
         </div>

@@ -11,7 +11,7 @@ namespace AMGamerPart3
 {
 
 
-    public partial class GameDetails
+    public partial class AddGame
     {
 
         /// <summary>

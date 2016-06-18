@@ -12,7 +12,7 @@ using System.Linq.Dynamic;
 
 namespace AMGamerPart3
 {
-    public partial class GameDetails : System.Web.UI.Page
+    public partial class AddGame : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

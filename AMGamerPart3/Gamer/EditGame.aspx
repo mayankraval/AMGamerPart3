@@ -5,7 +5,7 @@
         <div class="row">
             <div class="col-md-offset-2 col-md-8">
                 <h1>Game List</h1>
-                <a href="GameDetails.aspx" class="btn btn-success btn-sm"><i class="fa fa-plus"></i>Add a Game</a>
+                <a href="AddGame.aspx" class="btn btn-success btn-sm"><i class="fa fa-plus"></i>Add a Game</a>
 
                 <label for="PageSizeDropDownList">Records per page: </label>
                 <asp:DropDownList ID="PageSizeDropDownList" runat="server" AutoPostBack="true"
@@ -28,8 +28,8 @@
                         <asp:BoundField DataField="Spectators" HeaderText="Spectators" Visible="true" SortExpression="Spectators" />
                         <asp:BoundField DataField="WinningTeam" HeaderText="Winning Team" Visible="true" SortExpression="WinningTeam" />
                         <asp:BoundField DataField="LastUpdated" HeaderText="Last Updated" Visible="true" SortExpression="LastUpdated" />
-                        <asp:HyperLinkField HeaderText="Edit" Text="<i class='fa fa-pencil-square-o fa-lg'></i> Edit" NavigateUrl="~/|GameDetails.aspx.cs"
-                            DataNavigateUrlFields="GameID" DataNavigateUrlFormatString="GameDetails.aspx?GameID={0}"
+                        <asp:HyperLinkField HeaderText="Edit" Text="<i class='fa fa-pencil-square-o fa-lg'></i> Edit" NavigateUrl="~/|AddGame.aspx.cs"
+                            DataNavigateUrlFields="GameID" DataNavigateUrlFormatString="AddGame.aspx?GameID={0}"
                             ControlStyle-CssClass="btn btn-primary btn-sm" />
                         <asp:CommandField HeaderText="Delete" DeleteText="<i class='fa fa-trash-o fa-lg'></i> Delete" ShowDeleteButton="true"
                             ButtonType="Link" ControlStyle-CssClass="btn btn-danger btn-sm" />
