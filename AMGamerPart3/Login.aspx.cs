@@ -46,7 +46,7 @@ namespace AMGamerPart3
                 authenticationManager.SignIn(new AuthenticationProperties() { IsPersistent = false }, userIdentity);
 
                 // Redirect to Main Menu
-                Response.Redirect("~/Contoso/MainMenu.aspx");
+                Response.Redirect("~/EditGame.aspx");
             }
             else
             {
