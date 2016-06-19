@@ -30,6 +30,8 @@ namespace AMGamerPart3.User_Controls
                     {
                         UserPlaceHolder.Visible = true;
                     }
+                    username.InnerHtml= "<i class='fa fa-lg'>Welcome, " + HttpContext.Current.User.Identity.GetUserName() + "</i>";
+                    //username.InnerText = "Welcome " + HttpContext.Current.User.Identity.GetUserName();
                 }
                 else
                 {

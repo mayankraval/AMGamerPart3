@@ -46,7 +46,7 @@ namespace AMGamerPart3
                 authenticationManager.SignIn(new AuthenticationProperties() { IsPersistent = false }, userIdentity);
 
                 // Redirect to Main Menu
-                Response.Redirect("~/Gamer/EditGame.aspx");
+                Response.Redirect("~/Gamer/MainMenu.aspx");
             }
             else
             {

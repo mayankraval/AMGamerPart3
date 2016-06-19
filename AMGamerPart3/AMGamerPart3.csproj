@@ -292,19 +292,19 @@
       <DependentUpon>AMGamer.edmx</DependentUpon>
     </Compile>
     <Compile Include="Models\AspNetRole.cs">
-      <DependentUpon>UserModel.tt</DependentUpon>
+      <DependentUpon>AMGamer.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\AspNetUser.cs">
-      <DependentUpon>UserModel.tt</DependentUpon>
+      <DependentUpon>AMGamer.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\AspNetUserClaim.cs">
-      <DependentUpon>UserModel.tt</DependentUpon>
+      <DependentUpon>AMGamer.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\AspNetUserLogin.cs">
-      <DependentUpon>UserModel.tt</DependentUpon>
+      <DependentUpon>AMGamer.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\C__MigrationHistory.cs">
-      <DependentUpon>UserModel.tt</DependentUpon>
+      <DependentUpon>AMGamer.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Game.cs">
       <DependentUpon>AMGamer.tt</DependentUpon>
