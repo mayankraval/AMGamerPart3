@@ -34,7 +34,7 @@
     </form>
 
     <!-- Footer -->
-    <div class="navbar-fixed-bottom">
+    <div class="footer navbar navbar-fixed-bottom bg-info">
         <div class="nav nav-justified" style="background-color: #000000">
             <div class="navbar-text pull-left">
                 <p style="color: #ffffff">Copyright by Akhil Thakkar | Mayank Raval @ 2016</p>
