@@ -6,8 +6,8 @@
     Date: June 9th, 2016
     Description: This will be the page/form to create a game
     -->
-     <div class="container jumbotron">
-        <div class="col-md-offset-3 col-md-6">
+     <div class="container">
+        <div class="col-md-offset-3 col-md-6 transbox">
             <h1>Game Details</h1>
             <h5>All fields are Required</h5>
             <br />

@@ -7,7 +7,7 @@
    @Description : "Contact Us" page content is here inluding small "contact information" panel.
 --%>
     <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
-        <div class="container">
+        <div class="container transbox">
             <div class="row">
                 <div class="col-md-offset-4 col-md-8">
                     <h1>Contact Us</h1>

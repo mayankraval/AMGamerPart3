@@ -3,3 +3,13 @@
      background-image:url("../Assests/images/wallpaper.jpg"); 
      background-size:cover; 
  } 
+ div.transbox {
+     background-color: #ffffff;
+     border: 1px solid black;
+     opacity: 0.6;
+     filter: alpha(opacity=60); /* For IE8 and earlier */
+}
+ div.invtransbox{
+     opacity:1;
+     filter:alpha(opacity=100);
+ }

@@ -8,7 +8,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <div class="container">
         <div class="row">
-            <div class="col-md-offset-2 col-md-8">
+            <div class="col-md-offset-2 col-md-8 transbox">
                 <h1>Game Scorecard</h1>
                 <a href="Login.aspx" class="btn btn-success btn-sm"><i class="fa fa-plus"></i> Login to Edit</a>
 

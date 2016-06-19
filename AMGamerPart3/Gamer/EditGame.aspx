@@ -3,7 +3,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <div class="container">
         <div class="row">
-            <div class="col-md-offset-2 col-md-8">
+            <div class="col-md-offset-2 col-md-8 transbox">
                 <h1>Game List</h1>
                 <a href="AddGame.aspx" class="btn btn-success btn-sm"><i class="fa fa-plus"></i>Add a Game</a>
 
