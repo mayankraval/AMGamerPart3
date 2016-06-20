@@ -4,12 +4,11 @@
      background-size:cover; 
  } 
  div.transbox {
-     background-color: #ffffff;
+     background: rgba(255, 255, 255, 0.20);
      border: 1px solid black;
-     opacity: 0.6;
-     filter: alpha(opacity=60); /* For IE8 and earlier */
 }
  div.invtransbox{
-     opacity:1;
-     filter:alpha(opacity=100);
+     background-color: #ffffff;  
+     opacity: 0.6;
+     filter: alpha(opacity=60); /* For IE8 and earlier */
  }

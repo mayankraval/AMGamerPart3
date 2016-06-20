@@ -112,6 +112,24 @@ namespace AMGamerPart3.User_Controls {
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl editgame;
         
         /// <summary>
+        /// addteam control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl addteam;
+        
+        /// <summary>
+        /// editteam control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl editteam;
+        
+        /// <summary>
         /// logout control.
         /// </summary>
         /// <remarks>

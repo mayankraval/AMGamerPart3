@@ -7,10 +7,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace AMGamerPart3 {
+namespace AMGamerPart3.Gamer {
     
     
-    public partial class Default {
+    public partial class EditGameScore {
         
         /// <summary>
         /// PageSizeDropDownList control.
@@ -22,30 +22,12 @@ namespace AMGamerPart3 {
         protected global::System.Web.UI.WebControls.DropDownList PageSizeDropDownList;
         
         /// <summary>
-        /// GameGridView control.
+        /// GameScoreGridView control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GameGridView;
-        
-        /// <summary>
-        /// DropDownList1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList1;
-        
-        /// <summary>
-        /// TeamGridView control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView TeamGridView;
+        protected global::System.Web.UI.WebControls.GridView GameScoreGridView;
     }
 }

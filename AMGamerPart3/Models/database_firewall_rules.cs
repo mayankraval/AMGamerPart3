@@ -12,12 +12,13 @@ namespace AMGamerPart3.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class Team
+    public partial class database_firewall_rules
     {
-        public int TeamID { get; set; }
-        public string Name { get; set; }
-        public string Description { get; set; }
-        public decimal TotalScore { get; set; }
-        public decimal MaxScoreAllow { get; set; }
+        public int id { get; set; }
+        public string name { get; set; }
+        public string start_ip_address { get; set; }
+        public string end_ip_address { get; set; }
+        public System.DateTime create_date { get; set; }
+        public System.DateTime modify_date { get; set; }
     }
 }

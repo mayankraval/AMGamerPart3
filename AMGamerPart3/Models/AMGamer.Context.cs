@@ -25,8 +25,6 @@ namespace AMGamerPart3.Models
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<GameScore> GameScores { get; set; }
-        public virtual DbSet<Team> Teams { get; set; }
         public virtual DbSet<User> Users { get; set; }
         public virtual DbSet<C__MigrationHistory> C__MigrationHistory { get; set; }
         public virtual DbSet<AspNetRole> AspNetRoles { get; set; }
@@ -34,5 +32,8 @@ namespace AMGamerPart3.Models
         public virtual DbSet<AspNetUserLogin> AspNetUserLogins { get; set; }
         public virtual DbSet<AspNetUser> AspNetUsers { get; set; }
         public virtual DbSet<Game> Games { get; set; }
+        public virtual DbSet<database_firewall_rules> database_firewall_rules { get; set; }
+        public virtual DbSet<Team> Teams { get; set; }
+        public virtual DbSet<GameScore> GameScores { get; set; }
     }
 }

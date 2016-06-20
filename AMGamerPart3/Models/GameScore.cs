@@ -17,7 +17,12 @@ namespace AMGamerPart3.Models
         public int ScoreID { get; set; }
         public string GameID { get; set; }
         public string TeamID { get; set; }
-        public int TotalScore { get; set; }
-        public int MaxScore { get; set; }
+        public string GameName { get; set; }
+        public string Description { get; set; }
+        public string TeamA { get; set; }
+        public int TeamAScore { get; set; }
+        public string TeamB { get; set; }
+        public int TeamBScore { get; set; }
+        public decimal Spectators { get; set; }
     }
 }

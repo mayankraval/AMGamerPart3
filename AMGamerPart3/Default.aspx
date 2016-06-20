@@ -30,6 +30,34 @@
                         <asp:BoundField DataField="totalScore" HeaderText="Total Score" Visible="true" SortExpression="TotalScore"/>
                         <asp:BoundField DataField="Spectators" HeaderText="Spectators" Visible="true" SortExpression="Spectators"/>
                         <asp:BoundField DataField="WinningTeam" HeaderText="Winning Team" Visible="true" SortExpression="WinningTeam"/>
+                        <asp:BoundField DataField="LastUpdated" HeaderText="Last Updated" Visible="true" SortExpression="LastUpdated"/>
+                     </Columns>
+                </asp:GridView>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-offset-2 col-md-8 transbox">
+                <h1>Team Scorecard</h1>
+                <a href="Login.aspx" class="btn btn-success btn-sm"><i class="fa fa-plus"></i> Login to Edit</a>
+
+                <label for="PageSizeDropDownList">Records per page: </label>
+                <asp:DropDownList ID="DropDownList1" runat="server" AutoPostBack="true" 
+                    CssClass="btn btn-default btn-sm dropdown-toggle" OnSelectedIndexChanged="PageSizeDropDownList_SelectedIndexChanged">
+                    <asp:ListItem Text="3" Value="3" />
+                    <asp:ListItem Text="5" Value="5" />
+                    <asp:ListItem Text="All" Value="10000" />
+                </asp:DropDownList>
+
+                <asp:GridView runat="server" CssClass="table table-bordered table-striped table-hover" 
+                    ID="TeamGridView" AutoGenerateColumns="false" DataKeyNames="ID"
+                    AllowPaging="true" PageSize="3" OnPageIndexChanging="TeamGridView_PageIndexChanging"
+                    AllowSorting="true" OnSorting="TeamGridView_Sorting" OnRowDataBound="TeamGridView_RowDataBound">
+                    <Columns>
+                        <asp:BoundField DataField="ID" HeaderText="Team ID" Visible="true" SortExpression="ID" />
+                        <asp:BoundField DataField="Name" HeaderText="Team Name" Visible="true" SortExpression="Name" />
+                        <asp:BoundField DataField="Description" HeaderText="Description" Visible="true" SortExpression="Description" />
+                        <asp:BoundField DataField="TotalScore" HeaderText="Total Score" Visible="true" SortExpression="TotalScore"/>
+                        <asp:BoundField DataField="MaxScoreAllow" HeaderText="Max Score Allow / Week" Visible="true" SortExpression="MaxScoreAllow" />
                      </Columns>
                 </asp:GridView>
             </div>

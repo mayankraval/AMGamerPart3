@@ -131,8 +131,12 @@
     <Content Include="Contact.aspx" />
     <Content Include="Content\app.css" />
     <Content Include="Default.aspx" />
+    <Content Include="Gamer\AddGameScore.aspx" />
+    <Content Include="Gamer\AddTeam.aspx" />
     <Content Include="Gamer\EditGame.aspx" />
     <Content Include="Gamer\AddGame.aspx" />
+    <Content Include="Gamer\EditGameScore.aspx" />
+    <Content Include="Gamer\EditTeam.aspx" />
     <Content Include="Gamer\MainMenu.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="Logout.aspx" />
@@ -241,6 +245,20 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Gamer\AddGameScore.aspx.cs">
+      <DependentUpon>AddGameScore.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Gamer\AddGameScore.aspx.designer.cs">
+      <DependentUpon>AddGameScore.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Gamer\AddTeam.aspx.cs">
+      <DependentUpon>AddTeam.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Gamer\AddTeam.aspx.designer.cs">
+      <DependentUpon>AddTeam.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Gamer\EditGame.aspx.cs">
       <DependentUpon>EditGame.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -254,6 +272,20 @@
     </Compile>
     <Compile Include="Gamer\AddGame.aspx.designer.cs">
       <DependentUpon>AddGame.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Gamer\EditGameScore.aspx.cs">
+      <DependentUpon>EditGameScore.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Gamer\EditGameScore.aspx.designer.cs">
+      <DependentUpon>EditGameScore.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Gamer\EditTeam.aspx.cs">
+      <DependentUpon>EditTeam.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Gamer\EditTeam.aspx.designer.cs">
+      <DependentUpon>EditTeam.aspx</DependentUpon>
     </Compile>
     <Compile Include="Gamer\MainMenu.aspx.cs">
       <DependentUpon>MainMenu.aspx</DependentUpon>
@@ -304,6 +336,9 @@
       <DependentUpon>AMGamer.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\C__MigrationHistory.cs">
+      <DependentUpon>AMGamer.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\database_firewall_rules.cs">
       <DependentUpon>AMGamer.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Game.cs">

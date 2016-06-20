@@ -5,8 +5,6 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="934c759f5b0148e9a21862008b6dc666" Name="Diagram1">
-        <EntityTypeShape EntityType="gameModel.GameScore" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="gameModel.Team" Width="1.5" PointX="2.75" PointY="3.75" IsExpanded="true" />
         <EntityTypeShape EntityType="gameModel.User" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="gameModel.C__MigrationHistory" Width="1.5" PointX="0.75" PointY="6.75" />
         <EntityTypeShape EntityType="gameModel.AspNetRole" Width="1.5" PointX="5.75" PointY="6.5" />
@@ -17,6 +15,9 @@
         <AssociationConnector Association="gameModel.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" />
         <AssociationConnector Association="gameModel.AspNetUserRoles" />
         <EntityTypeShape EntityType="gameModel.Game" Width="1.5" PointX="7.375" PointY="0.75" />
+        <EntityTypeShape EntityType="gameModel.database_firewall_rules" Width="1.5" PointX="9.375" PointY="0.75" />
+        <EntityTypeShape EntityType="gameModel.Team" Width="1.5" PointX="0.75" PointY="3.75" />
+        <EntityTypeShape EntityType="gameModel.GameScore" Width="1.5" PointX="0.75" PointY="9.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
