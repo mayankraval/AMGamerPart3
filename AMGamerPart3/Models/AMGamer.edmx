@@ -83,8 +83,6 @@
             <PropertyRef Name="ScoreID" />
           </Key>
           <Property Name="ScoreID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="GameID" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="TeamID" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="GameName" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="Description" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="TeamA" Type="varchar" MaxLength="50" Nullable="false" />
@@ -403,8 +401,6 @@ warning 6002: The table/view 'game.sys.database_firewall_rules' does not have a 
             <PropertyRef Name="ScoreID" />
           </Key>
           <Property Name="ScoreID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="GameID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="TeamID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="GameName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="Description" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="TeamA" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
@@ -542,8 +538,6 @@ warning 6002: The table/view 'game.sys.database_firewall_rules' does not have a 
                 <ScalarProperty Name="TeamA" ColumnName="TeamA" />
                 <ScalarProperty Name="Description" ColumnName="Description" />
                 <ScalarProperty Name="GameName" ColumnName="GameName" />
-                <ScalarProperty Name="TeamID" ColumnName="TeamID" />
-                <ScalarProperty Name="GameID" ColumnName="GameID" />
                 <ScalarProperty Name="ScoreID" ColumnName="ScoreID" />
               </MappingFragment>
             </EntityTypeMapping>

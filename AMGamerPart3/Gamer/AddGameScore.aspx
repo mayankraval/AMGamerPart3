@@ -14,42 +14,21 @@
             <br />
             <div class="form-group">
                 <label class="" for="GameName">Game Name</label>
-                <asp:DropDownList runat="server" CssClass="form-control" ID="GameNameDropdownList">
-                    <asp:ListItem Text="Football" />
-                    <asp:ListItem Text="Baseball" />
-                    <asp:ListItem Text="Cricket" />
-                    <asp:ListItem Text="Basketball" />
-
-                </asp:DropDownList>
+                <asp:TextBox runat="server" ID="GameNameTextBox" CssClass="form-control" placeholder="Game Name" required="true"></asp:TextBox>
             </div>
             <div class="form-group">
                 <label class="" for="Description">Description</label>
                 <asp:TextBox runat="server" TextMode="MultiLine" ID="DescriptionTextBox" CssClass="form-control" placeholder="Desscribe The Game" required="true"></asp:TextBox>
             </div>
             <label class="" for="TeamA">Team A</label>
-            <asp:DropDownList runat="server" ID="TeamADropdownList" CssClass="form-control">
-                <asp:ListItem Text="Red" />
-                <asp:ListItem Text="Blue" />
-                <asp:ListItem Text="India" />
-                <asp:ListItem Text="Manchester United" />
-                <asp:ListItem Text="Blue Jays" />
-                <asp:ListItem Text="Raptors" />
+            <asp:TextBox runat="server" ID="TeamATextBox" CssClass="form-control" placeholder="Team A Name" required="true"></asp:TextBox>
 
-            </asp:DropDownList>
              <div class="form-group">
                 <label class="" for="TeamAScore">Team A Score</label>
                 <asp:TextBox runat="server" TextMode="Number" ID="TeamAScoreTextBox" CssClass="form-control" placeholder="Team A Score" required="true"></asp:TextBox>
             </div>
               <label class="" for="TeamB">Team B</label>
-            <asp:DropDownList runat="server" ID="TeamBDropdownList" CssClass="form-control">
-                <asp:ListItem Text="Green" />
-                <asp:ListItem Text="Yellow" />
-                <asp:ListItem Text="Australia" />
-                <asp:ListItem Text="Chelsea" />
-                <asp:ListItem Text="Yankees" />
-                <asp:ListItem Text="Cavs" />
-
-            </asp:DropDownList>
+            <asp:TextBox runat="server" ID="TeamBTextBox" />
             <div class="form-group">
                 <label class="" for="TeamBScore">Team B Score</label>
                 <asp:TextBox runat="server" TextMode="Number" ID="TeamBScoreTextBox" CssClass="form-control" placeholder="Team B Score" required="true"></asp:TextBox>
@@ -68,7 +47,7 @@
 
             <div class="text-right">
                 <asp:Button runat="server" Text="Cancel" ID="CancelButton1" CssClass="btn btn-warning btn-lg" UseSubmitBehavior="false" CausesValidation="false" OnClick="CancelButton1_Click" />
-                <asp:Button runat="server" Text="Add Game" ID="AddScoreButton" CssClass="btn btn-primary btn-lg" OnClick="AddScoreButton_Click" />
+                <asp:Button runat="server" Text="Add GameScore" ID="AddScoreButton" CssClass="btn btn-primary btn-lg" OnClick="AddScoreButton_Click" />
             </div>
         </div>
     </div>

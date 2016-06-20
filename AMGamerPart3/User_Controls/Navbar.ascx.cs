@@ -71,6 +71,9 @@ namespace AMGamerPart3.User_Controls
                 case "Game Details":
                     editgame.Attributes.Add("class", "active");
                     break;
+                case "Edit Game Score":
+                    editgamescore.Attributes.Add("class", "active");
+                    break;
                 case "Contact":
                     contact.Attributes.Add("class", "active");
                     break;

@@ -35,11 +35,11 @@ namespace AMGamerPart3.Gamer
 
                 if (updatedGameScore != null)
                 {
-                    GameNameDropdownList.SelectedItem.Text = updatedGameScore.GameName;
+                    GameNameTextBox.Text = updatedGameScore.GameName;
                     DescriptionTextBox.Text = updatedGameScore.Description;
-                    TeamADropdownList.SelectedItem.Text = updatedGameScore.TeamA;
+                    TeamATextBox.Text = updatedGameScore.TeamA;
                     TeamAScoreTextBox.Text = updatedGameScore.TeamAScore.ToString();
-                    TeamBDropdownList.SelectedItem.Text = updatedGameScore.TeamB;
+                    TeamBTextBox.Text = updatedGameScore.TeamB;
                     TeamBScoreTextBox.Text = updatedGameScore.TeamBScore.ToString();
                     SpectatorTextBox.Text = updatedGameScore.Spectators.ToString();
                     //dateTextBox.Text = updatedGameScore.LastUpdated.ToString("yyyy-MM-dd");
@@ -65,11 +65,11 @@ namespace AMGamerPart3.Gamer
                     newGameScore = (from GameScore in db.GameScores where GameScore.ScoreID == ScoreID select GameScore).FirstOrDefault();
                 }
                 // add for data to new Game record
-                newGameScore.GameName = GameNameDropdownList.SelectedItem.Text;
+                newGameScore.GameName = GameNameTextBox.Text;
                 newGameScore.Description = DescriptionTextBox.Text;
-                newGameScore.TeamA = TeamADropdownList.SelectedItem.Text;
+                newGameScore.TeamA = TeamATextBox.Text;
                 newGameScore.TeamAScore = Convert.ToInt32(TeamAScoreTextBox.Text);
-                newGameScore.TeamB = TeamBDropdownList.SelectedItem.Text;
+                newGameScore.TeamB = TeamBTextBox.Text;
                 newGameScore.TeamBScore = Convert.ToInt32(TeamBScoreTextBox.Text);
                 newGameScore.Spectators = Convert.ToInt32(SpectatorTextBox.Text);
                 //newGameScore.LastUpdated = Convert.ToDateTime(dateTextBox.Text);

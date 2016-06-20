@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="EditGameScore.aspx.cs" Inherits="AMGamerPart3.Gamer.EditGameScore" %>
+﻿<%@ Page Title="editgamescore" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="EditGameScore.aspx.cs" Inherits="AMGamerPart3.Gamer.EditGameScore" %>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <div class="container">
@@ -25,10 +25,9 @@
                         <asp:BoundField DataField="GameName" HeaderText="Game Name" Visible="true" SortExpression="GameName" />
                         <asp:BoundField DataField="Description" HeaderText="Description" Visible="true" SortExpression="Description" />
                         <asp:BoundField DataField="TeamA" HeaderText="TeamA" Visible="true" SortExpression="Description" />
-                        <asp:BoundField DataField="Description" HeaderText="Description" Visible="true" SortExpression="Description" />
-                        <asp:BoundField DataField="TotalScore" HeaderText="Total Score" Visible="true" SortExpression="TotalScore" />
-                        <asp:BoundField DataField="Description" HeaderText="Description" Visible="true" SortExpression="Description" />
-                        <asp:BoundField DataField="TotalScore" HeaderText="Total Score" Visible="true" SortExpression="TotalScore" />
+                        <asp:BoundField DataField="TeamAScore" HeaderText="Team A Score" Visible="true" SortExpression="TeamAScore" />
+                        <asp:BoundField DataField="TeamB" HeaderText="TeamB" Visible="true" SortExpression="TeamB" />
+                        <asp:BoundField DataField="TeamBScore" HeaderText="Team B Score" Visible="true" SortExpression="TeamBScore" />
                         <asp:BoundField DataField="Spectators" HeaderText="Spectators" Visible="true" SortExpression="Spectators" />
                         <%--<asp:BoundField DataField="LastUpdated" HeaderText="Last Updated" Visible="true" SortExpression="LastUpdated" />--%>
                         <asp:HyperLinkField HeaderText="Edit" Text="<i class='fa fa-pencil-square-o fa-lg'></i> Edit" NavigateUrl="~/|AddGameScore.aspx.cs"

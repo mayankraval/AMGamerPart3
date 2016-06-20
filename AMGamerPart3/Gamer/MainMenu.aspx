@@ -24,7 +24,7 @@
                         <asp:BoundField DataField="totalScore" HeaderText="Total Score" Visible="true" SortExpression="TotalScore"/>
                         <asp:BoundField DataField="Spectators" HeaderText="Spectators" Visible="true" SortExpression="Spectators"/>
                         <asp:BoundField DataField="WinningTeam" HeaderText="Winning Team" Visible="true" SortExpression="WinningTeam"/>
-                        <asp:BoundField DataField="LastUpdated" HeaderText="Last Updated" Visible="true" SortExpression="LastUpdated"/>
+                        <asp:BoundField DataField="LastUpdated" HeaderText="Last Updated" Visible="true" SortExpression="LastUpdated" DataFormatString="{0:MMM dd, yyyy}"/>
                      </Columns>
                 </asp:GridView>
             </div>

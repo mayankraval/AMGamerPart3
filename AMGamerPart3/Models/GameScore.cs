@@ -15,8 +15,6 @@ namespace AMGamerPart3.Models
     public partial class GameScore
     {
         public int ScoreID { get; set; }
-        public string GameID { get; set; }
-        public string TeamID { get; set; }
         public string GameName { get; set; }
         public string Description { get; set; }
         public string TeamA { get; set; }

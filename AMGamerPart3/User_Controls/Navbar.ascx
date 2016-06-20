@@ -43,6 +43,7 @@
                     <li id="editgame" runat="server"><a href="/Gamer/EditGame.aspx"><i class="fa fa-gamepad fa-lg"></i>Edit Game</a></li>
                     <li id="addteam" runat="server"><a href="/Gamer/AddTeam.aspx"><i class="fa fa-gamepad fa-lg"></i>Add Team</a></li>
                     <li id="editteam" runat="server"><a href="/Gamer/EditTeam.aspx"><i class="fa fa-gamepad fa-lg"></i>Edit Team</a></li>
+                    <li id="editgamescore" runat="server"><a href="/Gamer/EditGameScore.aspx"><i class="fa fa-gamepad fa-lg"></i>Edit Game Score</a></li>
                     <li id="logout" runat="server"><a href="/Logout.aspx"><i class="fa fa-sign-out fa-lg"></i>Logout</a></li>
                 </asp:PlaceHolder>
                 <li id="contact" runat="server"><a href="/Contact.aspx"><i class="fa fa-phone fa-lg"></i>Contact</a></li>

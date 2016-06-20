@@ -13,13 +13,13 @@ namespace AMGamerPart3.Gamer {
     public partial class AddGameScore {
         
         /// <summary>
-        /// GameNameDropdownList control.
+        /// GameNameTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList GameNameDropdownList;
+        protected global::System.Web.UI.WebControls.TextBox GameNameTextBox;
         
         /// <summary>
         /// DescriptionTextBox control.
@@ -31,13 +31,13 @@ namespace AMGamerPart3.Gamer {
         protected global::System.Web.UI.WebControls.TextBox DescriptionTextBox;
         
         /// <summary>
-        /// TeamADropdownList control.
+        /// TeamATextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList TeamADropdownList;
+        protected global::System.Web.UI.WebControls.TextBox TeamATextBox;
         
         /// <summary>
         /// TeamAScoreTextBox control.
@@ -49,13 +49,13 @@ namespace AMGamerPart3.Gamer {
         protected global::System.Web.UI.WebControls.TextBox TeamAScoreTextBox;
         
         /// <summary>
-        /// TeamBDropdownList control.
+        /// TeamBTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList TeamBDropdownList;
+        protected global::System.Web.UI.WebControls.TextBox TeamBTextBox;
         
         /// <summary>
         /// TeamBScoreTextBox control.
