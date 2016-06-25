@@ -1,4 +1,13 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Users.aspx.cs" Inherits="AMGamerPart3.Admin.Users" %>
+<%--
+ * @authors: Mayank Raval and  Akhil Thakkar 
+ * @Stud #: 200300508 & 200300312
+   @Web Site : http://amgamer3.azurewebsites.net/Users.aspx
+ * @date: June 22, 2016
+ * @version : 0.0.1 
+ * @Description : Users Page Displays the list of users registered and also 
+                  lets the admin to edit or delete the particular user. Also, This page is only viewed by an admin logged in.
+ --%>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <div class="container">
 

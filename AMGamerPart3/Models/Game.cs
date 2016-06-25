@@ -16,10 +16,14 @@ namespace AMGamerPart3.Models
     {
         public int GameID { get; set; }
         public string GameName { get; set; }
+        public string GameType { get; set; }
         public string Description { get; set; }
-        public int TotalScore { get; set; }
-        public long Spectators { get; set; }
+        public int Spectators { get; set; }
         public string WinningTeam { get; set; }
-        public System.DateTime LastUpdated { get; set; }
+        public int WinningTeamScore { get; set; }
+        public string LosingTeam { get; set; }
+        public int LosingTeamScore { get; set; }
+        public System.DateTime GameDate { get; set; }
+        public int AllowedTotalScore { get; set; }
     }
 }

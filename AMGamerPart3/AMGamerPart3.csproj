@@ -131,15 +131,21 @@
     <Content Include="Contact.aspx" />
     <Content Include="Content\app.css" />
     <Content Include="Default.aspx" />
-    <Content Include="Gamer\AddGameScore.aspx" />
-    <Content Include="Gamer\AddTeam.aspx" />
     <Content Include="Gamer\EditGame.aspx" />
     <Content Include="Gamer\AddGame.aspx" />
-    <Content Include="Gamer\EditGameScore.aspx" />
-    <Content Include="Gamer\EditTeam.aspx" />
     <Content Include="Gamer\MainMenu.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="Logout.aspx" />
+    <Content Include="Models\AMGamer.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>AMGamer.edmx</DependentUpon>
+      <LastGenOutput>AMGamer.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\AMGamer.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>AMGamer.edmx</DependentUpon>
+      <LastGenOutput>AMGamer.cs</LastGenOutput>
+    </Content>
     <Content Include="Models\UserModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>UserModel.edmx</DependentUpon>
@@ -151,13 +157,6 @@
       <LastGenOutput>UserModel.cs</LastGenOutput>
     </Content>
     <Content Include="packages.config" />
-    <EntityDeploy Include="Models\AMGamer.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>AMGamer.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="Models\AMGamer.edmx.diagram">
-      <DependentUpon>AMGamer.edmx</DependentUpon>
-    </Content>
     <Content Include="Register.aspx" />
     <Content Include="Scripts\jquery-2.2.4.min.map" />
     <Content Include="Site.Master" />
@@ -167,6 +166,13 @@
     </EntityDeploy>
     <Content Include="Models\UserModel.edmx.diagram">
       <DependentUpon>UserModel.edmx</DependentUpon>
+    </Content>
+    <EntityDeploy Include="Models\AMGamer.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>AMGamer.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\AMGamer.edmx.diagram">
+      <DependentUpon>AMGamer.edmx</DependentUpon>
     </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -184,16 +190,6 @@
     <Content Include="Content\font-awesome.min.css" />
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
-    <Content Include="Models\AMGamer.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>AMGamer.edmx</DependentUpon>
-      <LastGenOutput>AMGamer.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="Models\AMGamer.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>AMGamer.edmx</DependentUpon>
-      <LastGenOutput>AMGamer.cs</LastGenOutput>
-    </Content>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
@@ -214,7 +210,9 @@
     <Content Include="Scripts\jquery-2.2.4.min.js" />
     <Content Include="User_Controls\Jumbotron.ascx" />
     <Content Include="User_Controls\Navbar.ascx" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Admin\UserDetails.aspx.cs">
@@ -245,20 +243,6 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Gamer\AddGameScore.aspx.cs">
-      <DependentUpon>AddGameScore.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Gamer\AddGameScore.aspx.designer.cs">
-      <DependentUpon>AddGameScore.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Gamer\AddTeam.aspx.cs">
-      <DependentUpon>AddTeam.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Gamer\AddTeam.aspx.designer.cs">
-      <DependentUpon>AddTeam.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Gamer\EditGame.aspx.cs">
       <DependentUpon>EditGame.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -272,20 +256,6 @@
     </Compile>
     <Compile Include="Gamer\AddGame.aspx.designer.cs">
       <DependentUpon>AddGame.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Gamer\EditGameScore.aspx.cs">
-      <DependentUpon>EditGameScore.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Gamer\EditGameScore.aspx.designer.cs">
-      <DependentUpon>EditGameScore.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Gamer\EditTeam.aspx.cs">
-      <DependentUpon>EditTeam.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Gamer\EditTeam.aspx.designer.cs">
-      <DependentUpon>EditTeam.aspx</DependentUpon>
     </Compile>
     <Compile Include="Gamer\MainMenu.aspx.cs">
       <DependentUpon>MainMenu.aspx</DependentUpon>
@@ -324,33 +294,18 @@
       <DependentUpon>AMGamer.edmx</DependentUpon>
     </Compile>
     <Compile Include="Models\AspNetRole.cs">
-      <DependentUpon>AMGamer.tt</DependentUpon>
+      <DependentUpon>UserModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\AspNetUser.cs">
-      <DependentUpon>AMGamer.tt</DependentUpon>
+      <DependentUpon>UserModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\AspNetUserClaim.cs">
-      <DependentUpon>AMGamer.tt</DependentUpon>
+      <DependentUpon>UserModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\AspNetUserLogin.cs">
-      <DependentUpon>AMGamer.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\C__MigrationHistory.cs">
-      <DependentUpon>AMGamer.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\database_firewall_rules.cs">
-      <DependentUpon>AMGamer.tt</DependentUpon>
+      <DependentUpon>UserModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Game.cs">
-      <DependentUpon>AMGamer.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\GameScore.cs">
-      <DependentUpon>AMGamer.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Team.cs">
-      <DependentUpon>AMGamer.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\User.cs">
       <DependentUpon>AMGamer.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\UserModel.Context.cs">

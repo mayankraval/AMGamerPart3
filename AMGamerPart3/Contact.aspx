@@ -2,9 +2,11 @@
 
  <%--
  * @authors: Mayank Raval and  Akhil Thakkar
+ * @Stud #: 200300508 | 200300312
+ * @Web Site : http://amgamer3.azurewebsites.net/Contact.aspx
  * @date: June 8, 2016
  * @version : 0.0.1 
-   @Description : "Contact Us" page content is here inluding small "contact information" panel.
+ * @Description : "Contact Us" page content is here inluding small "contact information" panel.
 --%>
     <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
         <div class="container transbox">

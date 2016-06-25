@@ -1,4 +1,13 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="UserDetails.aspx.cs" Inherits="AMGamerPart3.Admin.UserDetails" %>
+<%--
+ * @authors: Mayank Raval and  Akhil Thakkar 
+ * @Stud #: 200300508 & 200300312
+   @Web Site : http://amgamer3.azurewebsites.net/UserDetails.aspx
+ * @date: June 22, 2016
+ * @version : 0.0.1 
+ * @Description : User Details page allow the admin to edit the user information,
+                  i.e username, email and phone number of a user and save it.
+ --%>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <div class="container">
 

@@ -7,13 +7,20 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace AMGamerPart3
-{
-
-
-    public partial class AddGame
-    {
-
+namespace AMGamerPart3 {
+    
+    
+    public partial class AddGame {
+        
+        /// <summary>
+        /// GameTypeDropDown control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList GameTypeDropDown;
+        
         /// <summary>
         /// GameNameTextBox control.
         /// </summary>
@@ -22,7 +29,7 @@ namespace AMGamerPart3
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox GameNameTextBox;
-
+        
         /// <summary>
         /// DescriptionTextBox control.
         /// </summary>
@@ -31,16 +38,43 @@ namespace AMGamerPart3
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox DescriptionTextBox;
-
+        
         /// <summary>
-        /// TotalScoresTextBox control.
+        /// WinningTeamTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TotalScoresTextBox;
-
+        protected global::System.Web.UI.WebControls.TextBox WinningTeamTextBox;
+        
+        /// <summary>
+        /// WinningTeamScoreTextBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox WinningTeamScoreTextBox;
+        
+        /// <summary>
+        /// LosingTeamTextBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox LosingTeamTextBox;
+        
+        /// <summary>
+        /// LosingTeamScoreTextBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox LosingTeamScoreTextBox;
+        
         /// <summary>
         /// SpectatorTextBox control.
         /// </summary>
@@ -49,25 +83,25 @@ namespace AMGamerPart3
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox SpectatorTextBox;
-
+        
         /// <summary>
-        /// WinninggTeamTextBox control.
+        /// AllowedTotalScore control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox WinninggTeamTextBox;
-
+        protected global::System.Web.UI.WebControls.TextBox AllowedTotalScore;
+        
         /// <summary>
-        /// dateTextBox control.
+        /// GameDateTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox dateTextBox;
-
+        protected global::System.Web.UI.WebControls.TextBox GameDateTextBox;
+        
         /// <summary>
         /// RangeValidator control.
         /// </summary>
@@ -76,7 +110,7 @@ namespace AMGamerPart3
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RangeValidator RangeValidator;
-
+        
         /// <summary>
         /// CancelButton1 control.
         /// </summary>
@@ -85,7 +119,7 @@ namespace AMGamerPart3
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button CancelButton1;
-
+        
         /// <summary>
         /// AddGameButton control.
         /// </summary>

@@ -11,6 +11,13 @@ using AMGamerPart3.Models;
 using System.Web.ModelBinding;
 using System.Linq.Dynamic;
 
+  //@Authors: Mayank Raval and Akhil Thakkar
+  //  @Stud #: 200300508 | 200300312
+  //  @Date: June 22, 2016
+  //  @version: 0.0.1
+  //  @Description: This page Displays the Game Menu(with all the games added)
+  //                and team menu(With all the teams) in a gridview menu.
+
 namespace AMGamerPart3.Gamer
 {
     public partial class MainMenu : System.Web.UI.Page

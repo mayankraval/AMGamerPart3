@@ -10,6 +10,11 @@ using AMGamerPart3.Models;
 using System.Web.ModelBinding;
 using System.Linq.Dynamic;
 
+//Author: Akhil Thakkar and Mayank Raval
+//    Stud #: 200300312 & 200300508
+//    Date: June 18th, 2016
+//    Description: Edit Page lists the added games by the users and also can
+//                 edit/delete the game if they want.Clicking edit will redirect to GameDetails.aspx.
 
 namespace AMGamerPart3
 {
@@ -55,7 +60,47 @@ namespace AMGamerPart3
 
         protected void GameGridView_RowDeleting(object sender, GridViewDeleteEventArgs e)
         {
+            //int selectedRow = e.RowIndex;
 
+            //int GameID = Convert.ToInt32(GameGridView.DataKeys[selectedRow].Values["GameID"]);
+
+            //using (GameDefaultConnection db = new GameDefaultConnection())
+            //{
+            //    Game deletedGame = (from GameRecords in db.Games
+            //                                  where GameRecords.GameID == GameID
+            //                                  select GameRecords).FirstOrDefault();
+
+            //    db..Remove(deletedGame);
+
+            //    db.SaveChanges();
+
+            //    this.GetGame();
+
+            //}
+            // store which row was clicked
+            int selectedRow = e.RowIndex;
+
+            // get the selected StudentID using the Grid's DataKey collection
+            int GameID = Convert.ToInt32(GameGridView.DataKeys[selectedRow].Values["GameID"]);
+
+            // use EF to find the selected student in the DB and remove it
+            using (GameDefaultConnection db = new GameDefaultConnection())
+            {
+                // create object of the Student class and store the query string inside of it
+                Game deletedTodo = (from GameRecords in db.Games
+                                    where GameRecords.GameID == GameID
+                                    select GameRecords).FirstOrDefault();
+
+                // remove the selected student from the db
+                db.Games.Remove(deletedTodo);
+
+                // save my changes back to the database
+                db.SaveChanges();
+
+                // refresh the grid
+                this.GetGame();
+
+            }
 
         }
 

@@ -5,6 +5,12 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
+// * @authors: Mayank Raval and Akhil Thakkar
+// * @date: June 22, 2016
+// * @version : 0.0.1 
+// * @Description : User Details page allow the admin to edit the user information,
+//                  i.e username, email and phone number of a user and save it. 
+
 // required for EF DB Access
 using AMGamerPart3.Models;
 using System.Web.ModelBinding;
@@ -13,6 +19,8 @@ using System.Web.ModelBinding;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.Owin.Security;
+
+
 
 namespace AMGamerPart3.Admin
 {

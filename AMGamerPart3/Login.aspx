@@ -2,8 +2,10 @@
 <%--
  * @authors: Mayank Raval and  Akhil Thakkar
  * @date: June 8, 2016
+ * @Web Site : http://amgamer3.azurewebsites.net/Login.aspx
  * @version : 0.0.1 
- * @Description : Login page allows registered user to edit the game tracker and if a new user, then it will redirect to register page
+ * @Description : Login page allows registered user to edit the game 
+                  tracker and if a new user, then it will redirect to register page
  --%>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <div class="container">    

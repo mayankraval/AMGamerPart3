@@ -12,15 +12,10 @@ namespace AMGamerPart3.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class GameScore
+    public partial class GameType
     {
-        public int ScoreID { get; set; }
-        public string GameName { get; set; }
+        public int GameTypeId { get; set; }
+        public string Name { get; set; }
         public string Description { get; set; }
-        public string TeamA { get; set; }
-        public int TeamAScore { get; set; }
-        public string TeamB { get; set; }
-        public int TeamBScore { get; set; }
-        public decimal Spectators { get; set; }
     }
 }
