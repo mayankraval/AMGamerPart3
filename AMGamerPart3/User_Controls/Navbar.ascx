@@ -39,7 +39,6 @@
                 </asp:PlaceHolder>
                 <asp:PlaceHolder ID="GamerPlaceHolder" runat="server">
                     <li id="menu" runat="server"><a href="/Gamer/MainMenu.aspx"><i class="fa fa-map-signs fa-lg"></i>Main Menu</a></li>
-                    <li id="addgame" runat="server"><a href="/Gamer/AddGame.aspx"><i class="fa fa-gamepad fa-lg"></i>Add Game</a></li>
                     <li id="editgame" runat="server"><a href="/Gamer/EditGame.aspx"><i class="fa fa-gamepad fa-lg"></i>Edit Game</a></li>
                     <li id="logout" runat="server"><a href="/Logout.aspx"><i class="fa fa-sign-out fa-lg"></i>Logout</a></li>
                 </asp:PlaceHolder>

@@ -30,11 +30,14 @@
                     AllowSorting="true" OnSorting="GameGridView_Sorting" OnRowDataBound="GameGridView_RowDataBound">
                     <Columns>
                         <asp:BoundField DataField="GameID" HeaderText="Game ID" Visible="true" SortExpression="GameID" />
+                        <asp:BoundField DataField="GameType" HeaderText="Game Type" Visible="true" SortExpression="GameType" />
                         <asp:BoundField DataField="Description" HeaderText="Description" Visible="true" SortExpression="Description" />
-                        <asp:BoundField DataField="totalScore" HeaderText="Total Score" Visible="true" SortExpression="TotalScore"/>
-                        <asp:BoundField DataField="Spectators" HeaderText="Spectators" Visible="true" SortExpression="Spectators"/>
                         <asp:BoundField DataField="WinningTeam" HeaderText="Winning Team" Visible="true" SortExpression="WinningTeam"/>
-                        <asp:BoundField DataField="LastUpdated" HeaderText="Last Updated" Visible="true" SortExpression="LastUpdated" DataFormatString="{0:MMM dd, yyyy}"/>
+                        <asp:BoundField DataField="WinningTeamScore" HeaderText="WinningTeamScore" Visible="true" SortExpression="WinningTeamScore" />
+                        <asp:BoundField DataField="LosingTeamScore" HeaderText="Losing Team Score" Visible="true" SortExpression="LosingTeamScore"/>
+                        <asp:BoundField DataField="LosingTeam" HeaderText="Losing Team" Visible="true" SortExpression="LosingTeam" />
+                        <asp:BoundField DataField="Spectators" HeaderText="Spectators" Visible="true" SortExpression="Spectators"/>
+                        <asp:BoundField DataField="GameDate" HeaderText="Game Date" Visible="true" SortExpression="GameDate"/>
                      </Columns>
                 </asp:GridView>
             </div>

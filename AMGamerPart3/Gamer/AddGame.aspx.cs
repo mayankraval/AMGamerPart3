@@ -116,7 +116,7 @@ namespace AMGamerPart3
 
         protected void CancelButton1_Click(object sender, EventArgs e)
         {
-            Response.Redirect("~/Default.aspx");
+            Response.Redirect("/Gamer/EditGame.aspx");
 
         }
     }

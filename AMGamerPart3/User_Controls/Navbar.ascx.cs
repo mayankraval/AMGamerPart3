@@ -65,9 +65,6 @@ namespace AMGamerPart3.User_Controls
                 case "Register":
                     register.Attributes.Add("class", "active");
                     break;
-                case "Game":
-                    addgame.Attributes.Add("class", "active");
-                    break;
                 case "Game Details":
                     editgame.Attributes.Add("class", "active");
                     break;

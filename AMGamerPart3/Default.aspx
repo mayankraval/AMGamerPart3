@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="AMGamerPart3.Default" %>
+﻿<%@ Page Title="Default" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="AMGamerPart3.Default" %>
 <%-- 
     File : Default.aspx
     Author : Mayank Raval(200300508) Akhil Thakkar(200300312)

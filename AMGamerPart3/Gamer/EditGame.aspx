@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="EditGame.aspx.cs" Inherits="AMGamerPart3.EditGame" %>
+﻿<%@ Page Title="Game Details" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="EditGame.aspx.cs" Inherits="AMGamerPart3.EditGame" %>
 
 <%-- @Author: Akhil Thakkar and Mayank Raval 
      @Stud #: 200300312 & 200300508
@@ -11,9 +11,9 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <div class="container">
         <div class="row">
-            <div class="col-md-offset-2 col-md-8 transbox">
+            <div class="col-md-offset-2 col-md-10 transbox">
                 <h1>Game List</h1>
-                <a href="~/Gamer/AddGame.aspx" class="btn btn-success btn-sm"><i class="fa fa-plus"></i>Add a Game</a>
+                <a href="/Gamer/AddGame.aspx" class="btn btn-success btn-sm"><i class="fa fa-plus"></i>Add a Game</a>
 
                 <label for="PageSizeDropDownList">Records per page: </label>
                 <asp:DropDownList ID="PageSizeDropDownList" runat="server" AutoPostBack="true"
@@ -39,8 +39,8 @@
                         <asp:BoundField DataField="AllowedTotalScore" HeaderText="Allowed Total Score" Visible="true" SortExpression="AllowedTotalScore" />
                         <asp:BoundField DataField="Spectators" HeaderText="Spectators" Visible="true" SortExpression="Spectators" />
                         <asp:BoundField DataField="GameDate" HeaderText="Game Date" Visible="true" SortExpression="GameDate" DataFormatString="{0:MMM dd, yyyy}" />
-                        <asp:HyperLinkField HeaderText="Edit" Text="<i class='fa fa-pencil-square-o fa-lg'></i> Edit" NavigateUrl="~/AddGame.aspx.cs"
-                            DataNavigateUrlFields="GameID" DataNavigateUrlFormatString="AddGame.aspx?GameID={0}"
+                        <asp:HyperLinkField HeaderText="Edit" Text="<i class='fa fa-pencil-square-o fa-lg'></i> Edit" NavigateUrl="~/Gamer/AddGame.aspx.cs"
+                            DataNavigateUrlFields="GameID" DataNavigateUrlFormatString="~/AddGame.aspx?GameID={0}"
                             ControlStyle-CssClass="btn btn-primary btn-sm" />
                         <asp:CommandField HeaderText="Delete" DeleteText="<i class='fa fa-trash-o fa-lg'></i> Delete" ShowDeleteButton="true"
                             ButtonType="Link" ControlStyle-CssClass="btn btn-danger btn-sm" />
