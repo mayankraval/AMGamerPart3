@@ -1,0 +1,28 @@
+﻿@{
+    var db = Database.Open("SmallBakery");
+    var data = db.Query("SELECT Name, Price FROM Product");
+    var myChart = new Chart(width: 600, height: 400)
+        .AddTitle("Product Sales")
+        .DataBindTable(dataSource: data, xField: "Name")
+        .Write();
+
+    var chartKey = Request["key"];
+    if (chartKey != null)
+    {
+        var cachedChart = Chart.GetFromCache(key: chartKey);
+        if (cachedChart == null)
+        {
+            cachedChart = new Chart(600, 400);
+            cachedChart.AddTitle("Cached Chart -- Cached at " + DateTime.Now);
+            cachedChart.AddSeries(
+               name: "Employee",
+               axisLabel: "Name",
+               xValue: new[] { "Peter", "Andrew", "Julie", "Mary", "Dave" },
+               yValues: new[] { "2", "6", "4", "5", "3" });
+            cachedChart.SaveToCache(key: chartKey,
+               minutesToCache: 2,
+               slidingExpiration: false);
+        }
+        Chart.WriteFromCache(chartKey);
+    }
+}

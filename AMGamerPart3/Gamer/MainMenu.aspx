@@ -40,6 +40,8 @@
                         <asp:BoundField DataField="GameDate" HeaderText="Game Date" Visible="true" SortExpression="GameDate"/>
                      </Columns>
                 </asp:GridView>
+                <asp:Literal ID="Literal1" runat="server"></asp:Literal>
+                <p><img src="../Chart.cshtml?key=2" id="chart" /></p>
             </div>
         </div>
     </div>

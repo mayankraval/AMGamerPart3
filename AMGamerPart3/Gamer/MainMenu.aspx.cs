@@ -11,6 +11,11 @@ using AMGamerPart3.Models;
 using System.Web.ModelBinding;
 using System.Linq.Dynamic;
 
+//Graph libraries
+// Use the `FusionCharts.Charts` namespace to be able to use classes and methods required to // create charts.
+  //using FusionCharts.Charts;
+  using System.Text;
+  
   //@Authors: Mayank Raval and Akhil Thakkar
   //  @Stud #: 200300508 | 200300312
   //  @Date: June 22, 2016
@@ -32,10 +37,13 @@ namespace AMGamerPart3.Gamer
                 //Get the Game data
                 this.GetGame();
             }
+
+            //Graph
+
         }
         protected void GetGame()
         {
-            //string sortString = Session["SortColumn"].ToString() + " " + Session["SortDirection"].ToString();
+            string sortString = Session["SortColumn"].ToString() + " " + Session["SortDirection"].ToString();
 
             // connect to EF
             using (GameDefaultConnection db = new GameDefaultConnection())
@@ -45,8 +53,8 @@ namespace AMGamerPart3.Gamer
                           select allGames);
 
                 // bind the result to the GridView
-                //GameGridView.DataSource = g1.AsQueryable().OrderBy(sortString).ToList();
-                GameGridView.DataSource = g1.AsQueryable().ToList();
+                GameGridView.DataSource = g1.AsQueryable().OrderBy(sortString).ToList();
+                //GameGridView.DataSource = g1.AsQueryable().ToList();
                 GameGridView.DataBind();
             }
         }
