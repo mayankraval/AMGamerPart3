@@ -22,19 +22,17 @@
 
                 <h1>Login Page</h1>
 
-                <div class="panel panel-primary">
+                <div class="col-md-12 transbox">
 
                     <div class="panel-heading">
 
-                        <h1 class="panel-title"><i class="fa fa-sign-in fa-lg"></i> Login</h1>
+ <%--                      <h1 class="panel-title"><i class="fa fa-sign-in fa-lg"></i> Login</h1>--%>
 
                     </div> 
 
                     <br />
 
-                    <div class="panel-body">
-
-                        <div class="form-group">
+                      <div class="form-group">
 
                             <label class="control-label" for="UserNameTextBox">Username:</label>
 
@@ -52,13 +50,11 @@
 
                         <div class="text-right">
 
-                            <asp:Button Text="Login" ID="LoginButton" runat="server" CssClass="btn btn-primary" OnClick="LoginButton_Click" TabIndex="0" />
+                            <asp:Button Text="Login" ID="LoginButton" runat="server" CssClass="btn btn-success" OnClick="LoginButton_Click" TabIndex="0" />
 
                         </div>
 
                     </div>
-
-                </div>
 
             </div>
 

@@ -25,15 +25,12 @@
 
                 <br />
 
-                <div class="panel panel-primary">
+                <div class="col-md-12 transbox">
 
                     <div class="panel-heading">
 
-                        <h1 class="panel-title"><i class="fa fa-user-plus fa-lg"></i> Register</h1>
+                   </div>
 
-                    </div>
-
-                    <div class="panel-body">
 
                         <div class="form-group">
 
@@ -88,8 +85,6 @@
                         </div>
 
                     </div>
-
-                </div>  
 
             </div>
 

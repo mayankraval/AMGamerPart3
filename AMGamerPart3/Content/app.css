@@ -3,6 +3,7 @@
      background-image:url("../Assests/images/wallpaper.jpg"); 
      background-size:cover; 
  } 
+
  div.transbox {
      background: rgba(255, 255, 255, 0.20);
      border: 1px solid black;
