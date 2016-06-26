@@ -20,6 +20,7 @@ namespace AMGamerPart3
 {
     public partial class EditGame : System.Web.UI.Page
     {
+        String GameType;
         protected void Page_Load(object sender, EventArgs e)
         {
             // if loading the page for the first time, populate the Game grid
@@ -27,6 +28,7 @@ namespace AMGamerPart3
             {
                 Session["SortColumn"] = "GameID";
                 Session["SortDirection"] = "ASC";
+                GameType = "cricket";
                 // Get the student data
                 this.GetGame();
             }
@@ -41,6 +43,7 @@ namespace AMGamerPart3
             {
                 // query the Students Table using EF and LINQ
                 var g1 = (from allGames in db.Games
+                          where allGames.GameType == GameType
                           select allGames);
 
                 // bind the result to the GridView
@@ -87,12 +90,12 @@ namespace AMGamerPart3
             using (GameDefaultConnection db = new GameDefaultConnection())
             {
                 // create object of the Student class and store the query string inside of it
-                Game deletedTodo = (from GameRecords in db.Games
+                Game deletedGame = (from GameRecords in db.Games
                                     where GameRecords.GameID == GameID
                                     select GameRecords).FirstOrDefault();
 
                 // remove the selected student from the db
-                db.Games.Remove(deletedTodo);
+                db.Games.Remove(deletedGame);
 
                 // save my changes back to the database
                 db.SaveChanges();
@@ -114,7 +117,12 @@ namespace AMGamerPart3
             this.GetGame();
 
         }
-
+        protected void GameTypeDropDownList_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            GameType = GameTypeDropDownList.SelectedItem.ToString();
+            // refresh the grid
+            this.GetGame();
+        }
         protected void GameGridView_RowDataBound(object sender, GridViewRowEventArgs e)
         {
 

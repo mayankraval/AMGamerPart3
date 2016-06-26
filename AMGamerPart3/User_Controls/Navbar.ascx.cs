@@ -59,7 +59,7 @@ namespace AMGamerPart3.User_Controls
                 case "Home Page":
                     home.Attributes.Add("class", "active");
                     break;
-                case "Login":
+                case "Log In":
                     login.Attributes.Add("class", "active");
                     break;
                 case "Register":
@@ -68,8 +68,14 @@ namespace AMGamerPart3.User_Controls
                 case "Game Details":
                     editgame.Attributes.Add("class", "active");
                     break;
+                case "Main Menu":
+                    menu.Attributes.Add("class", "active");
+                    break;
                 case "Contact":
                     contact.Attributes.Add("class", "active");
+                    break;
+                case "users":
+                    users.Attributes.Add("class", "active");
                     break;
             }
         }

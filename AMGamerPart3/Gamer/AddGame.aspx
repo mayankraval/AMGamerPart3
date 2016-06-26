@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Add Games" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="AddGame.aspx.cs" Inherits="AMGamerPart3.AddGame" %>
+﻿<%@ Page Title="Add Game" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="AddGame.aspx.cs" Inherits="AMGamerPart3.AddGame" %>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <!-- 
@@ -19,9 +19,9 @@
                 <label class="" for="GameType">Game Type</label>
                 <asp:DropDownList runat="server" ID="GameTypeDropDown" CssClass="form-control" placeholder="Game Type" required="true">
                     <asp:ListItem Text="Football" Value="football">Football</asp:ListItem>
-                    <asp:ListItem Text="Cricket" Value="football">Cricket</asp:ListItem>
-                    <asp:ListItem Text="Volleyball" Value="football">Volleyball</asp:ListItem>
-                    <asp:ListItem Text="Basketball" Value="football">Basketball</asp:ListItem>
+                    <asp:ListItem Text="Cricket" Value="cricket">Cricket</asp:ListItem>
+                    <asp:ListItem Text="Volleyball" Value="volleyball">Volleyball</asp:ListItem>
+                    <asp:ListItem Text="Basketball" Value="basketball">Basketball</asp:ListItem>
                 </asp:DropDownList>
             </div>
             <div class="form-group">

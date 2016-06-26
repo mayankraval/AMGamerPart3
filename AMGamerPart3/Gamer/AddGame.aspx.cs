@@ -75,7 +75,7 @@ namespace AMGamerPart3
                 }
                 // add for data to new Game record
                 newGame.GameName = GameNameTextBox.Text;
-                    newGame.GameType = GameTypeDropDown.SelectedValue;
+                newGame.GameType = GameTypeDropDown.SelectedItem.ToString();
                 newGame.Description = DescriptionTextBox.Text;
                 newGame.WinningTeam = WinningTeamTextBox.Text;
                 newGame.WinningTeamScore= Convert.ToInt32(WinningTeamScoreTextBox.Text);

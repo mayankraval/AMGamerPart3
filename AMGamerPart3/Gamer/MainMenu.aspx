@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="MainMenu.aspx.cs" Inherits="AMGamerPart3.Gamer.MainMenu" %>
+﻿<%@ Page Title="Main Menu" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="MainMenu.aspx.cs" Inherits="AMGamerPart3.Gamer.MainMenu" %>
 
 <%-- 
     @Authors: Mayank Raval and Akhil Thakkar

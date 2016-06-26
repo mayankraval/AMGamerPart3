@@ -14,6 +14,7 @@ namespace AMGamerPart3
 {
     public partial class Default : System.Web.UI.Page
     {
+        String GameType;
         protected void Page_Load(object sender, EventArgs e)
         {
             //if loading the page for the first time, populate the Game grid
@@ -21,6 +22,7 @@ namespace AMGamerPart3
             {
                 Session["SortColumn"] = "GameID";
                 Session["SortDirection"] = "ASC";
+                GameType = "cricket";
                 //Get the Game data
                 this.GetGame();
             }
@@ -32,9 +34,10 @@ namespace AMGamerPart3
             // connect to EF
             using (GameDefaultConnection db = new GameDefaultConnection())
             {
-                // query the Students Table using EF and LINQ
-                var g1 = (from allGames in db.Games
-                          select allGames);
+                // query the Game Table using EF and LINQ
+                var g1 = (from AddGame in db.Games
+                          where AddGame.GameType == GameType
+                          select AddGame);
 
                 // bind the result to the GridView
                 GameGridView.DataSource = g1.AsQueryable().OrderBy(sortString).ToList();
@@ -53,6 +56,13 @@ namespace AMGamerPart3
             this.GetGame();
         }
 
+        protected void GameTypeDropDownList_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            GameType = GameTypeDropDownList.SelectedItem.ToString();
+
+            // refresh the grid
+            this.GetGame();
+        }
         protected void GameGridView_PageIndexChanging(object sender, GridViewPageEventArgs e)
         {
             // Set the new page number
@@ -101,7 +111,45 @@ namespace AMGamerPart3
                 }
             }
         }
-  
-       
+
+        protected void demo_TextChanged(object sender, EventArgs e)
+        {
+            //Still figuring out how to convert text to start date and end date from textbox
+            //if (demo.Text.Trim().Length == 0)
+            //{
+            //    return;
+            //}
+            //string selectedDate = demo.Text;
+            //date.Text = selectedDate;
+            //if (selectedDate.Contains("-"))
+            //{
+            //    DateTime startDate;
+            //    DateTime endDate;
+            //    string[] splittedDates = selectedDate.Split("-".ToCharArray(), StringSplitOptions.RemoveEmptyEntries);
+            //    if (splittedDates.Count() == 2 && DateTime.TryParse(splittedDates[0], out startDate) && DateTime.TryParse(splittedDates[1], out endDate))
+            //    {
+            //        FirstDate.Text = startDate.ToShortDateString();
+            //        SecondDate.Text = endDate.ToShortDateString();
+            //    }
+            //    else
+            //    {
+            //        //maybe the client has modified/altered the input i.e. hacking tools
+            //    }
+            //}
+            //else
+            //{
+            //    DateTime selectedDateObj;
+            //    if (DateTime.TryParse(selectedDate, out selectedDateObj))
+            //    {
+            //        FirstDate.Text = selectedDateObj.ToShortDateString();
+            //        SecondDate.Text = string.Empty;
+            //    }
+            //    else
+            //    {
+            //        //maybe the client has modified/altered the input i.e. hacking tools
+            //    }
+            //}
+
+        }
     }
 }

@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Users.aspx.cs" Inherits="AMGamerPart3.Admin.Users" %>
+﻿<%@ Page Title="users" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Users.aspx.cs" Inherits="AMGamerPart3.Admin.Users" %>
 <%--
  * @authors: Mayank Raval and  Akhil Thakkar 
  * @Stud #: 200300508 & 200300312

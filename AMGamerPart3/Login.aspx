@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="AMGamerPart3.Login" %>
+﻿<%@ Page Title="LogIn" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="AMGamerPart3.Login" %>
 <%--
  * @authors: Mayank Raval and  Akhil Thakkar
  * @date: June 8, 2016

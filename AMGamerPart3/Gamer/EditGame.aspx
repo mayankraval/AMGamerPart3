@@ -23,6 +23,14 @@
                     <asp:ListItem Text="10" Value="10" />
                     <asp:ListItem Text="All" Value="10000" />
                 </asp:DropDownList>
+                <label for="GameTypeDropDownList">Game Name: </label>
+                <asp:DropDownList ID="GameTypeDropDownList" runat="server" AutoPostBack="true" 
+                    CssClass="btn btn-default btn-sm dropdown-toggle" OnSelectedIndexChanged="GameTypeDropDownList_SelectedIndexChanged">
+                    <asp:ListItem Text="Football" Value="football">Football</asp:ListItem>
+                    <asp:ListItem Text="Cricket" Value="cricket">Cricket</asp:ListItem>
+                    <asp:ListItem Text="Volleyball" Value="volleyball">Volleyball</asp:ListItem>
+                    <asp:ListItem Text="Basketball" Value="basketball">Basketball</asp:ListItem>
+                </asp:DropDownList>
 
                 <asp:GridView runat="server" CssClass="table table-bordered table-striped table-hover"
                     ID="GameGridView" AutoGenerateColumns="false" DataKeyNames="GameID" OnRowDeleting="GameGridView_RowDeleting"
@@ -40,7 +48,7 @@
                         <asp:BoundField DataField="Spectators" HeaderText="Spectators" Visible="true" SortExpression="Spectators" />
                         <asp:BoundField DataField="GameDate" HeaderText="Game Date" Visible="true" SortExpression="GameDate" DataFormatString="{0:MMM dd, yyyy}" />
                         <asp:HyperLinkField HeaderText="Edit" Text="<i class='fa fa-pencil-square-o fa-lg'></i> Edit" NavigateUrl="~/Gamer/AddGame.aspx.cs"
-                            DataNavigateUrlFields="GameID" DataNavigateUrlFormatString="~/AddGame.aspx?GameID={0}"
+                            DataNavigateUrlFields="GameID" DataNavigateUrlFormatString="/Gamer/AddGame.aspx?GameID={0}"
                             ControlStyle-CssClass="btn btn-primary btn-sm" />
                         <asp:CommandField HeaderText="Delete" DeleteText="<i class='fa fa-trash-o fa-lg'></i> Delete" ShowDeleteButton="true"
                             ButtonType="Link" ControlStyle-CssClass="btn btn-danger btn-sm" />
