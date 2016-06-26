@@ -22,6 +22,8 @@
                     <asp:ListItem Text="Cricket" Value="cricket">Cricket</asp:ListItem>
                     <asp:ListItem Text="Volleyball" Value="volleyball">Volleyball</asp:ListItem>
                     <asp:ListItem Text="Basketball" Value="basketball">Basketball</asp:ListItem>
+                    <asp:ListItem Text="Hockey" Value="hockey">Hockey</asp:ListItem>
+
                 </asp:DropDownList>
             </div>
             <div class="form-group">

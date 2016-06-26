@@ -30,7 +30,9 @@
                     <asp:ListItem Text="Cricket" Value="cricket">Cricket</asp:ListItem>
                     <asp:ListItem Text="Volleyball" Value="volleyball">Volleyball</asp:ListItem>
                     <asp:ListItem Text="Basketball" Value="basketball">Basketball</asp:ListItem>
-                </asp:DropDownList>
+                     <asp:ListItem Text="Hockey" Value="hockey">Hockey</asp:ListItem>
+
+                                   </asp:DropDownList>
 
                 <asp:GridView runat="server" CssClass="table table-bordered table-striped table-hover"
                     ID="GameGridView" AutoGenerateColumns="false" DataKeyNames="GameID" OnRowDeleting="GameGridView_RowDeleting"

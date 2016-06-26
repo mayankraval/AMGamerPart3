@@ -29,6 +29,8 @@
                     <asp:ListItem Text="Cricket" Value="cricket">Cricket</asp:ListItem>
                     <asp:ListItem Text="Volleyball" Value="volleyball">Volleyball</asp:ListItem>
                     <asp:ListItem Text="Basketball" Value="basketball">Basketball</asp:ListItem>
+                    <asp:ListItem Text="Hockey" Value="hockey">Hockey</asp:ListItem>
+
                 </asp:DropDownList>
                 <label for="GameTypeDropDownList">Select Week: </label>
                 <asp:TextBox runat="server" ID="demo" ClientIDMode="Static" name="demo" OnTextChanged="demo_TextChanged" ></asp:TextBox>
