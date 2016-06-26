@@ -9,7 +9,7 @@
   
     <div class="container">
         <div class="row">
-            <div class="col-md-offset-2 col-md-8 transbox">
+            <div class="table-responsive col-md-offset-2 col-md-8 transbox">
                 <h1>Game Scorecard</h1>
                 <% if (!HttpContext.Current.User.Identity.IsAuthenticated)
                     { %>
@@ -44,6 +44,7 @@
                 <%--<span>First Date:</span><asp:label id="FirstDate" runat="server"></asp:label>
 <span>Second Date:</span><asp:label id="SecondDate" runat="server"></asp:label>
                 <asp:Label ID="date" runat="server"></asp:Label>--%>
+                <asp:Label runat="server" ID="GameDesc" />
                 <asp:GridView runat="server" CssClass="table table-bordered table-striped table-hover" 
                     ID="GameGridView" AutoGenerateColumns="false" DataKeyNames="GameID"
                     AllowPaging="true" PageSize="3" OnPageIndexChanging="GameGridView_PageIndexChanging"
@@ -52,7 +53,14 @@
                         <asp:BoundField DataField="GameID" HeaderText="Game ID" Visible="true" SortExpression="GameID" />
                         <asp:BoundField DataField="GameType" HeaderText="Game Type" Visible="true" SortExpression="GameType" />
                         <asp:BoundField DataField="Description" HeaderText="Description" Visible="true" SortExpression="Description" />
-                        <asp:BoundField DataField="WinningTeam" HeaderText="Winning Team" Visible="true" SortExpression="WinningTeam"/>
+                        <%--<asp:TemplateField HeaderText="Description (short)">
+                <ItemTemplate>
+                    <div style="width: 200px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis">
+                        <%# Eval("Description") %>
+                    </div>
+                </ItemTemplate>
+            </asp:TemplateField>--%>
+<asp:BoundField DataField="WinningTeam" HeaderText="Winning Team" Visible="true" SortExpression="WinningTeam"/>
                         <asp:BoundField DataField="WinningTeamScore" HeaderText="WinningTeamScore" Visible="true" SortExpression="WinningTeamScore" />
                         <asp:BoundField DataField="LosingTeamScore" HeaderText="Losing Team Score" Visible="true" SortExpression="LosingTeamScore"/>
                         <asp:BoundField DataField="LosingTeam" HeaderText="Losing Team" Visible="true" SortExpression="LosingTeam" />

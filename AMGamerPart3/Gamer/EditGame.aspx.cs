@@ -29,7 +29,7 @@ namespace AMGamerPart3
                 Session["SortColumn"] = "GameID";
                 Session["SortDirection"] = "ASC";
                 GameType = "cricket";
-                // Get the student data
+                // Get the Game data
                 this.GetGame();
             }
 
@@ -41,7 +41,7 @@ namespace AMGamerPart3
             // connect to EF
             using (GameDefaultConnection db = new GameDefaultConnection())
             {
-                // query the Students Table using EF and LINQ
+                // query the Games Table using EF and LINQ
                 var g1 = (from allGames in db.Games
                           where allGames.GameType == GameType
                           select allGames);
@@ -83,18 +83,18 @@ namespace AMGamerPart3
             // store which row was clicked
             int selectedRow = e.RowIndex;
 
-            // get the selected StudentID using the Grid's DataKey collection
+            // get the selected GameID using the Grid's DataKey collection
             int GameID = Convert.ToInt32(GameGridView.DataKeys[selectedRow].Values["GameID"]);
 
-            // use EF to find the selected student in the DB and remove it
+            // use EF to find the selected game in the DB and remove it
             using (GameDefaultConnection db = new GameDefaultConnection())
             {
-                // create object of the Student class and store the query string inside of it
+                // create object of the Game class and store the query string inside of it
                 Game deletedGame = (from GameRecords in db.Games
                                     where GameRecords.GameID == GameID
                                     select GameRecords).FirstOrDefault();
 
-                // remove the selected student from the db
+                // remove the selected game from the db
                 db.Games.Remove(deletedGame);
 
                 // save my changes back to the database
