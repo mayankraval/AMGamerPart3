@@ -61,7 +61,10 @@
                             <label class="control-label" for="PasswordTextBox">Password:</label>
 
                             <asp:TextBox runat="server" TextMode="Password" CssClass="form-control" ID="PasswordTextBox" placeholder="Password" required="true" TabIndex="0"></asp:TextBox>
-
+                            <asp:RegularExpressionValidator ID="Regex5" runat="server" ValidationGroup="Validation" ControlToValidate="PasswordTextBox"
+    ValidationExpression="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&]{8,10}"
+    ErrorMessage="Password must contain: Minimum 8 and Maximum 10 characters atleast 1 UpperCase Alphabet, 1 LowerCase Alphabet, 1 Number and 1 Special Character"
+ForeColor="Red" BackColor="ActiveBorder" />
                         </div>
 
                         <div class="form-group">
